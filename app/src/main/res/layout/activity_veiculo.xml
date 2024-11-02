@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#172781"
+    tools:context=".Veiculo">
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="276dp"
+        android:layout_height="421dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/btnAtualizarVeiculo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.206"
+        app:layout_constraintStart_toEndOf="@+id/btnSalvarVeiculo"
+        app:layout_constraintTop_toBottomOf="@+id/textView4"
+        app:layout_constraintVertical_bias="1.0"
+        app:srcCompat="@drawable/veiculo" />
+
+    <EditText
+        android:id="@+id/editPlaca"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="48dp"
+        android:layout_marginEnd="101dp"
+        android:ems="10"
+        android:fontFamily="@font/zen_dots"
+        android:hint="Placa"
+        android:inputType="text"
+        android:textColorHint="#FFFFFF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView4" />
+
+    <EditText
+        android:id="@+id/editAno"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="101dp"
+        android:ems="10"
+        android:fontFamily="@font/zen_dots"
+        android:hint="Ano"
+        android:inputType="text"
+        android:textColorHint="#FFFFFF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editPlaca" />
+
+    <EditText
+        android:id="@+id/editMensalidade"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="101dp"
+        android:ems="10"
+        android:fontFamily="@font/zen_dots"
+        android:hint="Mensalidade"
+        android:inputType="text"
+        android:textColorHint="#FFFFFF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editAno" />
+
+    <Spinner
+        android:id="@+id/spinnerProprietarios"
+        android:layout_width="175dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="36dp"
+        android:layout_marginEnd="1dp"
+        android:outlineAmbientShadowColor="#FFFFFF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.17"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editMensalidade" />
+
+    <Button
+        android:id="@+id/btnSalvarVeiculo"
+        android:layout_width="155dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="162dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="158dp"
+        android:backgroundTint="#F44C17"
+        android:fontFamily="@font/zen_dots"
+        android:text="Cadastrar"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:cornerRadius="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/spinnerProprietarios" />
+
+    <Button
+        android:id="@+id/btnAtualizarVeiculo"
+        android:layout_width="153dp"
+        android:layout_height="55dp"
+        android:layout_marginStart="162dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="158dp"
+        android:backgroundTint="#F44C17"
+        android:fontFamily="@font/zen_dots"
+        android:text="Atualizar"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:cornerRadius="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnSalvarVeiculo" />
+
+    <Button
+        android:id="@+id/btnApagarVeiculo"
+        android:layout_width="153dp"
+        android:layout_height="58dp"
+        android:layout_marginStart="162dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="158dp"
+        android:backgroundTint="#F44C17"
+        android:fontFamily="@font/zen_dots"
+        android:text="Apagar"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:cornerRadius="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnAtualizarVeiculo" />
+
+    <ListView
+        android:id="@+id/listViewVeiculos"
+        android:layout_width="409dp"
+        android:layout_height="237dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="1dp"
+        android:cacheColorHint="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnApagarVeiculo"
+        app:layout_constraintVertical_bias="0.072" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="165dp"
+        android:layout_marginTop="33dp"
+        android:layout_marginEnd="165dp"
+        android:fontFamily="@font/zen_dots"
+        android:text="Veículo"
+        android:textColor="#FFFFFF"
+        android:textSize="34sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="41dp"
+        android:layout_marginTop="19dp"
+        android:layout_marginEnd="322dp"
+        android:layout_marginBottom="12dp"
+        android:fontFamily="@font/zen_dots"
+        android:text="Placa"
+        android:textColor="#F8F8F8"
+        app:layout_constraintBottom_toTopOf="@+id/editPlaca"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView4" />
+
+    <TextView
+        android:id="@+id/textView10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="41dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="335dp"
+        android:layout_marginBottom="5dp"
+        android:fontFamily="@font/zen_dots"
+        android:text="Ano"
+        android:textColor="#FFFFFF"
+        app:layout_constraintBottom_toTopOf="@+id/editAno"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editPlaca" />
+
+    <TextView
+        android:id="@+id/textView11"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="262dp"
+        android:layout_marginBottom="6dp"
+        android:fontFamily="@font/zen_dots"
+        android:text="Mensalidade"
+        android:textColor="#FFFFFF"
+        app:layout_constraintBottom_toTopOf="@+id/editMensalidade"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editAno" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
